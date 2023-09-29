@@ -1,10 +1,9 @@
+#CONFIGURATIONS SERVICE DISCOVERY SERVER
 spring:
   application:
     name: registry
-
 server:
   port: 8081
-
 eureka:
   client:
     register-with-eureka: false

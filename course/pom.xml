@@ -30,6 +30,7 @@
     </dependencies>
 
     <build><!--ONDE DEFINIMOS OS PLUGINS QUE SERÃO UTILIZADOS EM ALGUM CICLO DE VIDA DO MAVEN-->
+        <finalName>course</finalName> <!--Name usado na geração do JAR (Aplicação executavel)desse service -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
