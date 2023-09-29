@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    container_name: db_course
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - microservices_devdojo:/var/lib/mysql
+
+volumes:
+  microservices_devdojo:
