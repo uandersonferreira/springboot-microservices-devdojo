@@ -1,7 +1,7 @@
 package br.com.uanderson.course.endpoint.controller;
 
+import br.com.uanderson.core.model.Course;
 import br.com.uanderson.course.endpoint.service.CourseService;
-import br.com.uanderson.course.model.Course;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -20,6 +20,6 @@ public class CourseController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<Iterable<Course>> listAllPageable(Pageable pageable){
-        return new ResponseEntity<>(courseService.listAllPageable(pageable), HttpStatus.OK);
+        return new ResponseEntity<>(courseService.listAllCoursesPageable(pageable), HttpStatus.OK);
     }
 }//class

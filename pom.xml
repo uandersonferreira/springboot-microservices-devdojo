@@ -20,6 +20,7 @@
 
     <modules><!--DEFINI OS OS MODULOS QUE IRÃO HERDAR AS CONFIGURAÇÕES DESSE POM.XML-->
         <module>course</module>
+        <module>core</module>
     </modules>
 
     <dependencies> <!--SÃO AS DEPENDÊNCIAS QUE OS MÓDULO IRÃO HERDAR-->

@@ -1,0 +1,4 @@
+br/com/uanderson/youtube/core/repository/CourseRepository.class
+br/com/uanderson/youtube/core/model/AbstractEntity.class
+br/com/uanderson/youtube/core/model/Course.class
+br/com/uanderson/youtube/core/model/Course$CourseBuilder.class

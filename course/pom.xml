@@ -17,14 +17,37 @@
 
     <properties>
         <java.version>11</java.version>
+        <core.version>1.0-SNAPSHOT</core.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>br.com.uanderson</groupId>
+            <artifactId>core</artifactId>
+            <version>${core.version}</version>
+        </dependency>
 
     </dependencies>
 
     <build><!--ONDE DEFINIMOS OS PLUGINS QUE SERÃO UTILIZADOS EM ALGUM CICLO DE VIDA DO MAVEN-->
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

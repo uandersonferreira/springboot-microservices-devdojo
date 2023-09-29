@@ -1,7 +1,8 @@
 package br.com.uanderson.course.endpoint.service;
 
-import br.com.uanderson.course.model.Course;
-import br.com.uanderson.course.repository.CourseRepository;
+
+import br.com.uanderson.core.model.Course;
+import br.com.uanderson.core.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +13,15 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class CourseService {
+
     private final CourseRepository courseRepository;
 
-    public Iterable<Course> listAllPageable(Pageable pageable){
-        log.info("Listing all courses . . . . . ");
+    public Iterable<Course> listAllCoursesPageable(Pageable pageable) {
+        log.info("Listing all courses");
         return courseRepository.findAll(pageable);
     }
 }
+
 /*
     @RequiredArgsConstructor: Gera um constructor com
     todos os atributos finais declarados na class.

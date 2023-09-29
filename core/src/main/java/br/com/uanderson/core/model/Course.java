@@ -1,4 +1,4 @@
-package br.com.uanderson.course.model;
+package br.com.uanderson.core.model;
 
 import lombok.*;
 
@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor//Construtor sem argumentos
 @AllArgsConstructor//Construtor com todos os abritubos
 @ToString
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode
 public class Course implements AbstractEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,6 @@ public class Course implements AbstractEntity{
     @NotNull(message = "The field 'title' is mandatory!!")
     @Column(nullable = false)
     private String title;
-    @Override
-    public Long getId() {
-        return this.id;
-    }
 }
 /*
  onlyExplicitlyIncluded = true: Esta parte da configuração indica

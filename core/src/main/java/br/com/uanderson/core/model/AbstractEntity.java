@@ -1,4 +1,4 @@
-package br.com.uanderson.course.model;
+package br.com.uanderson.core.model;
 
 import java.io.Serializable;
 
